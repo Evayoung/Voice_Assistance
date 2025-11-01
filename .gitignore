@@ -1,0 +1,116 @@
+# Voice Assistant .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+voice_assistant.log
+logs/
+
+# Model Files (too large for git)
+whisper_model/
+whisper_model_tiny/
+*.onnx
+*.onnx.json
+*.bin
+*.pt
+*.pth
+
+# Keep model directory structure but not files
+!whisper_model/.gitkeep
+!whisper_model_tiny/.gitkeep
+!voices/.gitkeep
+
+# Configuration (may contain sensitive info)
+# Uncomment if your config has API keys
+# config.yaml
+
+# User-specific settings
+config.local.yaml
+.env
+*.env
+
+# Audio test files
+*.wav
+*.mp3
+*.flac
+test_audio/
+
+# Cache
+.cache/
+__pycache__/
+*.pyc
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation builds
+docs/_build/
+site/
+
+# OS specific
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Google Cloud credentials (if using hybrid mode)
+*-credentials.json
+service-account*.json
