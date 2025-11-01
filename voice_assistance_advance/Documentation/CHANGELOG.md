@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0] - Production-Ready Release
+## [2.0.0] - Production-Ready Speech-To-Text/Text-To-Speech Release
 
 ### 🎉 Major Features
 
@@ -265,7 +265,7 @@ whisper:
 
 ## License
 
-This project is designed for educational use, specifically for blind students in Nigeria.
+This project is designed for educational use, specifically a pre-test project to aid learning for blind students in Nigeria.
 
 ---
 
