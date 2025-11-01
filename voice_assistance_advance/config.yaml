@@ -1,0 +1,67 @@
+# Voice Assistant Configuration
+
+# Wake Word Settings
+wake_word:
+  phrase: "assistant"  # The wake word phrase
+  timeout: 10  # seconds to stay active after wake word
+  threshold: 0.7  # similarity threshold for wake word detection
+
+# Whisper (STT) Settings
+whisper:
+  # Model selection: "whisper_model_tiny" or "whisper_model" (small)
+  model_dir: "whisper_model"  # Change to "whisper_model_tiny" for faster/less accurate
+  device: "cpu"
+  compute_type: "int8"
+  
+  # Accent optimization prompt (customize for your dialect)
+  accent_prompt: "Nigerian English. West African accent. Common Nigerian names and expressions. Igbo, Yoruba, Hausa words may appear."
+  
+  # VAD (Voice Activity Detection) Parameters
+  vad:
+    enabled: true
+    threshold: 0.5  # 0.0-1.0, higher = more aggressive noise filtering
+    min_speech_duration_ms: 250
+    max_speech_duration_s: 30
+    min_silence_duration_ms: 500
+    speech_pad_ms: 400
+  
+  # Transcription Quality
+  transcription:
+    language: "en"
+    beam_size: 5  # Higher = more accurate but slower (1-5)
+    best_of: 5
+    temperature: 0.0
+    compression_ratio_threshold: 2.4
+    log_prob_threshold: -1.0
+    no_speech_threshold: 0.6  # Higher = more aggressive silence filtering
+
+# Piper (TTS) Settings
+piper:
+  model_file: "voices/en_GB-southern_english_female-low.onnx"
+  blocking_mode: false  # If true, wait for speech before processing next command
+
+# Audio Settings
+audio:
+  sample_rate: 16000
+  chunk_duration_seconds: 3
+  blocksize: 4096
+  channels: 1
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "voice_assistant.log"
+  console: true
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Error Recovery
+error_recovery:
+  max_restart_attempts: 3
+  restart_delay_seconds: 1
+
+# Commands (skill triggers)
+commands:
+  joke: ["joke", "tell me a joke", "make me laugh"]
+  time: ["time", "what time is it", "date"]
+  sleep: ["sleep", "go to sleep", "deactivate"]
+  exit: ["exit", "goodbye", "stop", "quit"]

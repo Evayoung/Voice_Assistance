@@ -1,0 +1,32 @@
+# Voice Assistant Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+numpy>=1.24.0
+sounddevice>=0.4.6
+PyYAML>=6.0
+
+# Speech-to-Text (STT)
+faster-whisper>=1.0.0
+
+# Text-to-Speech (TTS)
+piper-tts>=1.2.0
+
+# Utilities
+pyjokes>=0.6.0
+
+# Optional: Google Cloud Speech-to-Text (for hybrid mode)
+# Uncomment if you want to use hybrid mode with Google STT
+# google-cloud-speech>=2.21.0
+
+# Mobile development (KivyMD) - Uncomment for mobile app
+# kivy>=2.3.0
+# kivymd>=1.2.0
+# kivy-deps.angle>=0.4.0  # Windows only
+# kivy-deps.glew>=0.3.1   # Windows only
+# kivy-deps.sdl2>=0.7.0   # Windows only
+
+# Development tools (optional)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0
